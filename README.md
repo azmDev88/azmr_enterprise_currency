@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)]()
 
-`azmr_enterprise_currency` is a production-ready, enterprise-grade financial library built for core banking systems, payment gateways, and fintech platforms. It prioritizes **zero-error precision**, **clean code architecture**, and **idiomatic Rust performance**.
+`azmr_enterprise_currency` is a production-ready, enterprise-grade financial library built specifically for the Indonesian financial landscape. It solves critical localization challenges—such as decimal/thousand separator standards and Indonesian banking bilyet compliance—for core banking systems, payment gateways, and fintech platforms. Built on **high-precision decimal logic** and **idiomatic Rust performance**.
 
 ---
 
@@ -13,9 +13,9 @@
 
 - 💎 **High-Precision Decimals**: Powered by `rust_decimal`, ensuring zero floating-point rounding errors for mission-critical transactions.
 - 🏗️ **Clean Code Architecture**: Strictly follows domain-driven design principles with a clear separation of concerns.
-- 🦀 **Idiomatic Match Patterns**: Utilizes Rust's powerful range pattern matching for lightning-fast and readable numerical conversions.
+- 🇮🇩 **Core Banking Compliance**: Specifically designed for Indonesian banking standards, handling complex localization (Rp 1.000,00 vs $ 1,000.00).
+- ✍️ **Indonesian "Terbilang" Engine**: A robust, range-pattern based spell-out engine for bilyet/check requirements.
 - 🌍 **Multi-Currency & Forex**: Built-in support for global currencies and dynamic Foreign Exchange (FX) pair settlements.
-- 🇮🇩 **Professional IDR Formatter**: Industry-standard "Terbilang" (spell-out) logic for Indonesian Rupiah, compliant with banking bilyet requirements.
 - ⚡ **Zero-Boilerplate Macros**: Intuitive `money!` and `fx_pair!` macros for elegant financial data modeling.
 
 ---

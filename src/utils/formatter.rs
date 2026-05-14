@@ -37,3 +37,38 @@ pub fn terbilang_rupiah(n: i64) -> String {
         }
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_terbilang_basic() {
+        assert_eq!(terbilang_rupiah(0), "Nol");
+        assert_eq!(terbilang_rupiah(1), "Satu");
+        assert_eq!(terbilang_rupiah(11), "Sebelas");
+        assert_eq!(terbilang_rupiah(12), "Dua Belas");
+        assert_eq!(terbilang_rupiah(20), "Dua Puluh");
+        assert_eq!(terbilang_rupiah(21), "Dua Puluh Satu");
+    }
+
+    #[test]
+    fn test_terbilang_hundreds() {
+        assert_eq!(terbilang_rupiah(100), "Seratus");
+        assert_eq!(terbilang_rupiah(105), "Seratus Lima");
+        assert_eq!(terbilang_rupiah(250), "Dua Ratus Lima Puluh");
+    }
+
+    #[test]
+    fn test_terbilang_thousands() {
+        assert_eq!(terbilang_rupiah(1000), "Seribu");
+        assert_eq!(terbilang_rupiah(1500), "Seribu Lima Ratus");
+        assert_eq!(terbilang_rupiah(1500000), "Satu Juta Lima Ratus Ribu");
+    }
+
+    #[test]
+    fn test_terbilang_large() {
+        assert_eq!(terbilang_rupiah(125500000), "Seratus Dua Puluh Lima Juta Lima Ratus Ribu");
+        assert_eq!(terbilang_rupiah(1000000000), "Satu Miliar");
+    }
+}

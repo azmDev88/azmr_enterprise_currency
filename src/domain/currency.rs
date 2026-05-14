@@ -81,3 +81,30 @@ impl EnterpriseCurrency for Money {
         format!("{} {}", terbilang, cur_name)
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use rust_decimal_macros::dec;
+
+    #[test]
+    fn test_money_formatting_idr() {
+        let m = Money::new(dec!(125500000.00), CurrencyCode::IDR);
+        assert_eq!(m.format_intl(), "Rp 125,500,000.00");
+        assert_eq!(m.format_local(), "Rp 125.500.000,00");
+    }
+
+    #[test]
+    fn test_money_formatting_usd() {
+        let m = Money::new(dec!(2450.75), CurrencyCode::USD);
+        assert_eq!(m.format_intl(), "$ 2,450.75");
+        // Local IDR style for USD
+        assert_eq!(m.format_local(), "$ 2.450,75");
+    }
+
+    #[test]
+    fn test_spell_out() {
+        let m = Money::new(dec!(1500000), CurrencyCode::IDR);
+        assert_eq!(m.spell_out_id(), "Satu Juta Lima Ratus Ribu Rupiah");
+    }
+}
