@@ -2,6 +2,9 @@
 name = "enterprise_currency"
 version = "1.0.0"
 edition = "2021"
+description = "High-precision enterprise currency engine with Indonesian localization and spell-out support."
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/azmDev88/azmr_enterprise_currency"
 
 [dependencies]
 rust_decimal = "1.32"

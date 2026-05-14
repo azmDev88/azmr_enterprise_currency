@@ -4,7 +4,7 @@ use enterprise_currency::domain::currency::EnterpriseCurrency;
 fn main() {
     println!("=== CORE BANKING SYSTEM ENGINE ===\n");
     
-    // Skenario 1: Saldo Rekening Lokal (contoh: myBCA / Panin)
+    // Skenario 1: Saldo Rekening Lokal (contoh: Bank Umum / Branch Utama)
     let saldo_idr = money!(125500000.00, IDR);
     println!("[INFO] Pengecekan Saldo Nasabah");
     println!("Mutasi Lokal : {}", saldo_idr.format_local());

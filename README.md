@@ -83,7 +83,7 @@ src/
 ---
 
 ## 📜 License
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the **MIT** and **Apache-2.0** Licenses. See `LICENSE-MIT` and `LICENSE-APACHE` for more information.
 
 ---
 
